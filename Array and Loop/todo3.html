@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .delete-button {
+        background-color: rgb(179, 1, 1);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        display: inline;
+        padding: 10px 20px;
+        font-weight: 600;
+      }
+      .listelements {
+        display: inline-block;
+      }
+      .container {
+        width: 300px;
+        border: 1px solid black;
+        padding: 10px 20px;
+        border-radius: 12px;
+      }
+      .listcontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 12px;
+        border: 1px solid black;
+        padding: 0px 20px;
+        margin: 10px 0;
+      }
+      .list {
+        padding: 10px 20px;
+        border-radius: 12px;
+        border: 1px solid black;
+      }
+      .add {
+        padding: 10px 20px;
+        background-color: rgb(0, 143, 7);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+      }
+      .input-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      h3 {
+        text-align: center;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Todo List</h3>
+      <hr />
+      <div class="input-container">
+        <input
+          placeholder="Add todo list"
+          class="list"
+          required=""
+          onkeydown="enter(event)"
+        />
+        <button onclick="store()" class="add">Add</button>
+      </div>
+      <div class="display"></div>
+    </div>
+    <script>
+      let list = [];
+
+      let htmlcode = "";
+      function store() {
+        let activity = document.querySelector(".list");
+        list.push(activity.value);
+        htmlcode += `<div class="listcontainer" id="${
+          list.length - 1
+        }"><p class="listelements">${
+          list[list.length - 1]
+        }</p> <button class="delete-button"onclick="deletee(${
+          list.length - 1
+        });">delete</button></div>`;
+        display = htmlcode;
+        document.querySelector(".display").innerHTML = htmlcode;
+        document.querySelector(".list").value = "";
+      }
+      function enter(event) {
+        if (event.key === "Enter") {
+          store();
+        }
+      }
+      function deletee(ele) {
+        list.splice(ele, 1);
+        let del = document.getElementById(`${ele}`);
+        del.remove();
+      }
+    </script>
+  </body>
+</html>

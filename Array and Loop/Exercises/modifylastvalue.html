@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nums = [1, 20, 22, 24, 5];
+      nums[nums.length - 1] = 99;
+      console.log(nums);
+      function lastvaluearray(nums) {
+        console.log(nums[nums.length - 1]);
+      }
+      let string = ["hi", "hello", "good"];
+      lastvaluearray(nums);
+      lastvaluearray(string);
+      function swap(nums) {
+        let temp;
+        temp = nums[0];
+        nums[0] = nums[nums.length - 1];
+        nums[nums.length - 1] = temp;
+        console.log(nums);
+      }
+      swap(nums);
+      swap(string);
+    </script>
+  </body>
+</html>

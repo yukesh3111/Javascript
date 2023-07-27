@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .add {
+        background-color: black;
+        color: white;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        transition: opacity 0.15s;
+      }
+
+      .is-toggled {
+        transition: all 0.5s;
+        background-color: rgb(230, 230, 230);
+        color: black;
+      }
+
+      .theme-container {
+        margin: 50px 0px;
+        display: flex;
+        width: 300px;
+        justify-content: space-evenly;
+      }
+      .theme-game,
+      .theme-Tech,
+      .theme-Music,
+      .theme-game1,
+      .theme-Music1,
+      .theme-Tech1 {
+        padding: 10px 15px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        font-weight: 500;
+        border: 1px solid black;
+      }
+      .toggle {
+        color: white;
+        background-color: black;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="add" onclick="toggled();">Request Now</button>
+    <script>
+      function toggled() {
+        let but1 = document.querySelector(".add");
+        if (but1.innerHTML === "Request Now") {
+          but1.classList.add("is-toggled");
+          but1.innerHTML = "Requested";
+        } else {
+          but1.classList.remove("is-toggled");
+          but1.innerHTML = "Request Now";
+        }
+      }
+    </script>
+    <div class="theme-container">
+      <button class="theme-game1" onclick="toggled2('.theme-game')">
+        Gaming
+      </button>
+      <button class="theme-Music1" onclick="toggled2('.theme-Music')">
+        Music
+      </button>
+      <button class="theme-Tech1" onclick="toggled2('.theme-Tech')">
+        Tech
+      </button>
+    </div>
+    <script>
+      function toggled2(classpara) {
+        let but = document.querySelector(`${classpara}`);
+        but.classList.toggle("toggle");
+      }
+    </script>
+
+    <div class="theme-container">
+      <button class="theme-game" onclick="toggled3('.theme-game')">
+        Gaming
+      </button>
+      <button class="theme-Music" onclick="toggled3('.theme-Music')">
+        Music
+      </button>
+      <button class="theme-Tech" onclick="toggled3('.theme-Tech')">Tech</button>
+    </div>
+
+    <script>
+      function toggled3(classpara) {
+        let but = document.querySelector(`${classpara}`);
+        let but1 = document.querySelector(".theme-game");
+        let but2 = document.querySelector(".theme-Music");
+        let but3 = document.querySelector(".theme-Tech");
+        if (classpara === ".theme-Tech") {
+          if (
+            !but1.classList.contains("toggle") &&
+            !but2.classList.contains("toggle")
+          ) {
+            but.classList.toggle("toggle");
+          }
+        } else if (classpara === ".theme-Music") {
+          if (
+            !but1.classList.contains("toggle") &&
+            !but3.classList.contains("toggle")
+          ) {
+            but.classList.toggle("toggle");
+          }
+        } else {
+          if (
+            !but2.classList.contains("toggle") &&
+            !but3.classList.contains("toggle")
+          ) {
+            but.classList.toggle("toggle");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

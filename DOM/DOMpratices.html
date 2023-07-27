@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      function sub() {
+        let subscribed = document.querySelector(".subscribe-button");
+        if (subscribed.innerText === "Subscribe") {
+          subscribed.innerHTML = "Subscribed";
+        } else {
+          subscribed.innerHTML = "Subscribe";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button class="subscribe-button" onclick="sub()">Subscribe</button>
+  </body>
+</html>

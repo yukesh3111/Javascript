@@ -1,0 +1,32 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: black;
+}
+button {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  color: white;
+  font-size: large;
+}
+.number {
+  background-color: rgb(60, 60, 60);
+}
+.operator {
+  background-color: rgb(250, 96, 40);
+  font-size: x-large;
+}
+.clear {
+  background-color: rgb(248, 42, 42);
+}
+.equal {
+  background-color: rgb(32, 173, 32);
+}
+input {
+  height: 30px;
+  width: 96%;
+  margin-bottom: 5px;
+  font-size: larger;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="change()">Start</button>
+    <script>
+      function change() {
+        setTimeout(function () {
+          let but = document.querySelector("button");
+          if (but.innerHTML === "Start") {
+            but.innerHTML = "finished";
+          } else {
+            but.innerHTML = "Start";
+          }
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

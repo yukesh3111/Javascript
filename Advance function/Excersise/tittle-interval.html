@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let tittle = document.querySelector("title");
+      let count = 0;
+      setInterval(function () {
+        tittle.innerHTML = `(${count + 1}) New messages`;
+        count += 1;
+      }, 2000);
+    </script>
+  </body>
+</html>

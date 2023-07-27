@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="icr()">Add</button>
+    <button onclick="dec()">Remove</button>
+    <script>
+      let tittle = document.querySelector("title");
+      let count = 0;
+      function icr() {
+        count += 1;
+      }
+      function dec() {
+        count -= 1;
+      }
+
+      setInterval(function () {
+        if (count === 0) {
+          tittle.innerHTML = "App name";
+        } else if (count !== 0) {
+          tittle.innerHTML = `(${count}) New messages`;
+        }
+      }, 2000);
+    </script>
+  </body>
+</html>

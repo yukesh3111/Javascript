@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock | papper | Scissor</title>
+    <script type="text/javascript" src="javascript.js"></script>
+    <style>
+      body {
+        background-color: rgb(20, 20, 20);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #rocks,
+      #papers,
+      #scissorss {
+        height: 45px;
+        width: 45px;
+        padding: 0;
+      }
+      .input button,
+      .userpick,
+      .computermove {
+        padding: 20px;
+        background-color: rgb(20, 20, 20);
+        border: 3px solid white;
+        margin: 0px 10px;
+        border-radius: 50px;
+      }
+      h2,
+      p {
+        font-size: 32px;
+        color: white;
+      }
+      .result {
+        padding: 10px 25px;
+        font-size: 18px;
+      }
+      .result:hover {
+        background-color: rgb(219, 197, 96);
+      }
+      .usermove-active {
+        height: 45px;
+        width: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>Rock Paper And Scissor Game</h2>
+      <div class="input">
+        <button class="rock" onclick="result('rock');">
+          <img src="Image/rock.png" id="rocks" />
+        </button>
+        <button class="paper" onclick="result('paper');">
+          <img src="Image/paper.png" id="papers" />
+        </button>
+        <button class="scissor" onclick="result('scissor')">
+          <img src="Image/scissors.png" id="scissorss" />
+        </button>
+      </div>
+      <h2>Result</h2>
+      <p>
+        You pick <button class="userpick"></button>computer pick<button
+          class="computermove"
+        ></button>
+      </p>
+      <p class="score"></p>
+      <p class="count">wins: 0 loose: 0 tie: 0</p>
+      <button onclick="reset()" class="result">Reset</button>
+    </div>
+  </body>
+</html>

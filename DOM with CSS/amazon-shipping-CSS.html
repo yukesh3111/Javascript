@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>shipping calculator</title>
+    <script>
+      function calculator() {
+        let calvalue = document.querySelector(".input");
+        let result = document.querySelector(".result");
+        if (calvalue.value <= 40) {
+          result.innerHTML = "$ " + parseInt(calvalue.value) + 10;
+        } else {
+          result.innerHTML = "$ " + calvalue.value;
+        }
+      }
+      function listener(event) {
+        if (event.key === "Enter") {
+          calculator();
+        }
+      }
+    </script>
+    <style>
+      .input {
+        padding: 8px;
+      }
+      .button {
+        padding: 10px;
+        color: white;
+        background-color: green;
+        border: none;
+        font-size: 15px;
+        transition: all 0.15s;
+      }
+      .button:hover {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Amazon Shipping Calculator</p>
+    <p>Order under $40= +$10 shipping</p>
+    <p>Order over $40 =FREE Shipping</p>
+    <input
+      class="input"
+      type="number"
+      onkeydown="listener(event);"
+      onkeyup="console.log('listening');"
+      placeholder="Cost of order"
+    />
+    <button onclick="calculator();" class="button">Calculator</button>
+    <p>Total cost is <span class="result"></span></p>
+  </body>
+</html>

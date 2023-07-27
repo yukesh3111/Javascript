@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      function sub() {
+        let subscribed = document.querySelector(".subscribe-button");
+        if (subscribed.innerText === "Subscribe") {
+          subscribed.innerHTML = "Subscribed";
+          subscribed.classList.add("subscribe-active");
+        } else {
+          subscribed.innerHTML = "Subscribe";
+          subscribed.classList.remove("subscribe-active");
+        }
+      }
+    </script>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      .subscribe-button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 50px;
+        background-color: rgb(196, 48, 43);
+        color: white;
+        font-weight: bold;
+        transition: all 0.5s opacity 0.15s;
+      }
+      .subscribe-button:hover {
+        opacity: 0.7;
+      }
+      .subscribe-active {
+        background-color: rgb(240, 240, 240);
+        color: black;
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button class="subscribe-button" onclick="sub()">Subscribe</button>
+  </body>
+</html>

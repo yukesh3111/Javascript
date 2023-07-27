@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input placeholder="Add todo list" class="list" />
+    <button onclick="store()">Add</button>
+    <div class="display"></div>
+    <script>
+      let list = [];
+
+      let htmlcode = "";
+      function store() {
+        let activity = document.querySelector(".list");
+        list.push(activity.value);
+        htmlcode += `<p>${list[list.length - 1]}</p>`;
+        display = htmlcode;
+        document.querySelector(".display").innerHTML = htmlcode;
+        document.querySelector(".list").value = "";
+      }
+    </script>
+  </body>
+</html>

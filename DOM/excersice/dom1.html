@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      function taken(parameter) {
+        let result = document.querySelector(".result");
+        if (parameter === "Head") {
+          result.innerHTML = "Head";
+        } else {
+          result.innerHTML = "Tails";
+        }
+      }
+
+      function display() {
+        let name = document.querySelector(".input");
+        let show = document.querySelector(".result2");
+        show.innerHTML = name.value;
+      }
+      function listener(event) {
+        if (event.key === "Enter") {
+          display();
+        }
+      }
+
+      function typing(event) {
+        let typin = document.querySelector(".input");
+        let show2 = document.querySelector(".result");
+        typin.innerHTML = show2.value;
+        console.log(show2.value);
+      }
+    </script>
+  </head>
+  <body>
+    <button class="head" onclick="taken('Head');">Head</button>
+    <button class="tails" onclick="taken('Tails');">Tails</button>
+    <p>you chose <span class="result"></span></p>
+    <br />
+    <br />
+    <input
+      type="text"
+      class="input"
+      onkeydown="listener(event);"
+      onkeyup="typing(event);"
+    />
+    <button type="submit" onclick="display()">Submit</button>
+    <p class="result3"></p>
+    <p>Your name is <span class="result2"></span></p>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function removeEgg(foods) {
+        let count = 0;
+        for (let i = 0; i < foods.length; i++) {
+          if (foods[i] === "egg" && count < 2) {
+            count++;
+            continue;
+          }
+          console.log(foods[i]);
+        }
+      }
+      let foods = ["egg", "apple", "Ham", "egg", "egg", "egg"];
+      foods = foods.reverse();
+      removeEgg(foods);
+    </script>
+  </body>
+</html>

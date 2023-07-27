@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function heads(){
+			let computervalue=Math.random();
+			let computerresult='';
+			let result='';
+			if (computervalue>=0 && computervalue<1/2) {
+				computerresult='head';
+			} 
+			else {
+				computerresult='tails';
+			}
+			console.log('computer choice '+computerresult);
+			if(computerresult==='head')
+			{
+				result='won';
+			}
+			else{
+				result='loose';
+			}
+			console.log(result);
+		}
+
+		function tail(){
+			let computervalue=Math.random();
+			let computerresult='';
+			let result='';
+			if (computervalue>=0 && computervalue<1/2) {
+				computerresult='head';
+			} 
+			else {
+				computerresult='tails';
+			}
+			console.log('computer choice '+ computerresult);
+			if(computerresult==='tails')
+			{
+				result='won';
+			}
+			else{
+				result='loose';
+			}
+			console.log(result);
+		}
+	</script>
+</head>
+<body>
+	<p>User Choice</p>
+	<button onclick="heads()">Head</button>
+	<button onclick="tail()">tail</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="added()">Add to cart</button>
+    <p></p>
+    <script>
+      let res = document.querySelector("p");
+      function added() {
+        let time = setTimeout(function () {
+          res.innerHTML = "Added";
+        }, 2000);
+        setTimeout(function () {
+          res.innerHTML = "";
+        }, 4000);
+      }
+    </script>
+  </body>
+</html>
